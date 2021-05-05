@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            font-family: sans-serif;
+        }
+        #click {
+            padding: 5px;
+            background-color: aquamarine;
+            text-align: center;
+        }
+        #move {
+            padding: 20px;
+            background-color: chartreuse;
+            width: 70px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3 id="click">Click me</h3>
+    <div id="move">Move me</div>
+    <script>
+        let click = document.getElementById('click');
+        let move = document.getElementById('move');
+        click.onclick = (e) => {
+            let x = Math.random() * window.innerWidth;
+            let y = Math.random() * window.innerHeight;
+            move.style.position = "absolute";
+            move.style.left = x + "px";
+            move.style.top = y + "px";
+        }
+    </script>
+</body>
+
+</html>
